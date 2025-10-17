@@ -2,9 +2,6 @@
 MGV Technology develops custom audio systems that merge design, engineering, and creativity. Our main project, the MGS 2030 S, is a handcrafted speaker delivering powerful and clean sound. Future plans include the MSC 1000 receiver with VU meters and Transmission Line technology.
 
 
-# ✨ MGV TECHNOLOGY ✨  
-![Banner](https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif)
-
 ## 🔊 About  
 **MGV Technology** is an independent project focused on custom audio innovation.  
 We design and build unique sound systems that merge **engineering, design and creativity**.  
