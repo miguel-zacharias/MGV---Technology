@@ -26,7 +26,7 @@ We design and build unique sound systems that merge **engineering, design and cr
 ---
 
 ## 📸 Gallery  
-![Speaker](https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif)  
+![Speaker]
 *The vibe of MGS 2030 S*  
 
 ---
