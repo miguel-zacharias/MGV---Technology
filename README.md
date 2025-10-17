@@ -34,7 +34,7 @@ We design and build unique sound systems that merge **engineering, design and cr
 ## 🖤 Author  
 Made with passion by **[Miguel Zacharias](https://github.com/seu-user)**  
 
-![Made with Love](https://img.shields.io/badge/Made%20with-Love-black?style=for-the-badge&logo=github)  
+![Made with Love](https://img.shields.io/badge/Made%20with-Love-red?style=for-the-badge&logo=github)  
 ![Status](https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge)  
 
 ---
