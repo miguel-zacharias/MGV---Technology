@@ -1,18 +1,242 @@
-/* NAVBAR FLUTUANTE CENTRAL */
+/* Floating Navbar com ícones e botão de tema */
+/* NAVBAR VISUAL IDÊNTICA AO EXEMPLO */
 .floating-navbar {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(11,15,18,0.97);
+  border-radius: 0;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+  padding: 0;
+  min-width: unset;
+  max-width: unset;
+  height: 64px;
+  transition: all .28s cubic-bezier(.4,1,.4,1);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 32px;
+  gap: 24px;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.35em;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+.logo-icon {
+  background: #fff;
+  color: #181c20;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+}
+.logo-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.13em;
+  letter-spacing: -0.5px;
+}
+.navbar-links {
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar-links li {
+  margin: 0;
+}
+.navbar-links a {
+  color: #eaf0f6;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.08em;
+  padding: 8px 18px;
+  border-radius: 18px;
+  transition: background .18s, color .18s;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navbar-links a:hover, .navbar-links a:focus {
+  background: rgba(158,174,192,0.13);
+  color: #fff;
+}
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: #eaf0f6;
+  font-size: 1.3em;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background .18s, color .18s;
+}
+.theme-toggle-btn:hover, .theme-toggle-btn:focus {
+  background: rgba(158,174,192,0.13);
+  color: #fff;
+}
+.navbar-hr {
+  width: 90vw;
+  max-width: 1200px;
+  height: 2px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #3a4151 0%, #23272f 100%);
+  border-radius: 2px;
+  opacity: 1;
+  transition: opacity .28s;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.10);
+}
+.floating-navbar.navbar-float {
   top: 32px;
   left: 50%;
+  right: unset;
   transform: translateX(-50%);
-  z-index: 100;
   background: rgba(11,15,18,0.92);
   border-radius: 32px;
   box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
   padding: 10px 36px;
-  display: flex;
-  align-items: center;
   min-width: 320px;
   max-width: 90vw;
+  height: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.floating-navbar.navbar-float .navbar-inner {
+  padding: 0;
+  gap: 18px;
+  justify-content: center;
+}
+.floating-navbar.navbar-float .navbar-logo {
+  font-size: 1.1em;
+  gap: 8px;
+}
+.floating-navbar.navbar-float .logo-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 1em;
+}
+.floating-navbar.navbar-float .logo-text {
+  font-size: 1em;
+}
+.floating-navbar.navbar-float .navbar-links {
+  gap: 18px;
+}
+.floating-navbar.navbar-float .theme-toggle-btn {
+  font-size: 1.1em;
+  padding: 6px 8px;
+}
+.floating-navbar.navbar-float .navbar-hr {
+  display: none;
+}
+@media (max-width: 900px) {
+  .navbar-inner {
+    padding: 0 10px;
+    gap: 10px;
+  }
+  .navbar-links {
+    gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .floating-navbar {
+    height: 44px;
+    font-size: 0.98em;
+  }
+  .navbar-inner {
+    padding: 0 2px;
+    gap: 4px;
+  }
+  .navbar-links {
+    gap: 4px;
+  }
+  .navbar-links a {
+    font-size: 0.98em;
+    padding: 6px 8px;
+    gap: 4px;
+  }
+  .floating-navbar.navbar-float {
+    padding: 6px 8px;
+    min-width: unset;
+    max-width: 98vw;
+  }
+  .theme-toggle-btn {
+    font-size: 1.1em;
+    padding: 6px 8px;
+  }
+}
+@media (max-width: 600px) {
+  .floating-navbar {
+    height: 44px;
+    font-size: 0.98em;
+    gap: 6px;
+  }
+  .floating-navbar ul {
+    gap: 6px;
+  }
+  .floating-navbar a {
+    font-size: 0.98em;
+    padding: 6px 8px;
+    gap: 4px;
+  }
+  .floating-navbar.navbar-float {
+    padding: 6px 8px;
+    min-width: unset;
+    max-width: 98vw;
+  }
+  .theme-toggle-btn {
+    font-size: 1.1em;
+    padding: 6px 8px;
+  }
+}
+
+body.dark-theme {
+  background: linear-gradient(180deg,#050608 0%, #0b0f12 40%);
+  color: #e6eef6;
+}
+/* NAVBAR FLUTUANTE CENTRAL */
+
+/* NAVBAR: topo fixo, flutua ao rolar */
+.floating-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(11,15,18,0.97);
+  border-radius: 0;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+  padding: 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: unset;
+  max-width: unset;
+  height: 56px;
+  transition: all .28s cubic-bezier(.4,1,.4,1);
 }
 .floating-navbar ul {
   display: flex;
@@ -38,11 +262,26 @@
   background: rgba(158,174,192,0.13);
   color: #fff;
 }
+
+/* NAVBAR FLUTUANTE CENTRALIZADA AO ROLAR */
+.floating-navbar.navbar-float {
+  top: 32px;
+  left: 50%;
+  right: unset;
+  transform: translateX(-50%);
+  background: rgba(11,15,18,0.92);
+  border-radius: 32px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
+  padding: 10px 36px;
+  min-width: 320px;
+  max-width: 90vw;
+  height: auto;
+}
+
 @media (max-width: 600px) {
   .floating-navbar {
-    padding: 6px 8px;
-    min-width: unset;
-    max-width: 98vw;
+    height: 44px;
+    font-size: 0.98em;
   }
   .floating-navbar ul {
     gap: 8px;
@@ -50,6 +289,11 @@
   .floating-navbar a {
     font-size: 0.98em;
     padding: 6px 8px;
+  }
+  .floating-navbar.navbar-float {
+    padding: 6px 8px;
+    min-width: unset;
+    max-width: 98vw;
   }
 }
 /* Estilo principal - cores escuras, grid e gradientes inspirados na imagem anexada */
