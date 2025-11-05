@@ -65,9 +65,27 @@ figcaption{margin-top:8px;color:var(--muted);font-size:13px;text-align:center}
 .lazy-image{opacity:0;transform:translateY(8px) scale(0.995);filter:blur(6px);transition:opacity .8s ease, transform .7s cubic-bezier(.2,.9,.3,1), filter .6s}
 .lazy-image.loaded{opacity:1;transform:none;filter:blur(0)}
 
-.pdf-list{list-style:none;padding:0;margin-top:16px}
-.pdf-list li{margin:8px 0}
-.pdf-list a{color:#dfe9f6;text-decoration:none;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.02);display:inline-block}
+.pdf-list{list-style:none;padding:0;margin-top:16px;display:flex;flex-direction:column;align-items:center;gap:18px}
+.pdf-list li{margin:0;width:100%;max-width:320px;display:flex;justify-content:center}
+.pdf-list a{
+  color:#dfe9f6;
+  text-decoration:none;
+  padding:16px 24px;
+  border-radius:16px;
+  background:linear-gradient(90deg,rgba(158,174,192,0.10) 0%,rgba(11,15,18,0.85) 100%);
+  display:block;
+  font-size:1.08em;
+  font-weight:600;
+  box-shadow:0 2px 16px 0 rgba(0,0,0,0.18);
+  letter-spacing:0.01em;
+  transition:background .18s,box-shadow .18s,transform .18s;
+}
+.pdf-list a:hover{
+  background:linear-gradient(90deg,rgba(158,174,192,0.18) 0%,rgba(11,15,18,0.95) 100%);
+  box-shadow:0 4px 32px 0 rgba(0,0,0,0.28);
+  color:#fff;
+  transform:translateY(-2px) scale(1.03);
+}
 
 .drive-hint{margin-top:14px;color:var(--muted);font-size:13px}
 
