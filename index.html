@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MGV Technology ©</title>
-  <link rel="icon" href="arquivos/media/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="arquivos/css/style.css">
+  <link rel="icon" href="assets/media/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="bg-grid"></div>
@@ -41,6 +41,87 @@
       </div>
   </section>
 
+  <!-- NOVA SESSÃO: Como montei -->
+  <section id="how-made" class="container how-made">
+    <h2>Como eu montei a mCaixa (MGS 2030-S)</h2>
+    <p class="muted">Descrição prática e técnica do processo de montagem, elétrica e integração dos componentes.</p>
+
+    <div class="steps-grid">
+      <article class="step">
+        <h3>1. Fonte de alimentação</h3>
+        <p>Utilizei uma fonte ATX de PC para alimentar o conjunto. As barras principais que interessam são:</p>
+        <ul>
+          <li><strong>+12V</strong> — alimenta o amplificador e o rádio.</li>
+          <li><strong>GND</strong> — terra comum para todos os módulos (obrigatório unir as massas).</li>
+        </ul>
+        <p class="muted">Exemplo de capacidade: uma fonte ATX típica pode fornecer dezenas de amperes no trilho de +12V (dependendo do modelo). Para segurança, proteja a linha com um fusível.</p>
+      </article>
+
+      <article class="step">
+        <h3>2. Fluxo de sinal</h3>
+        <p>Conexões principais:</p>
+        <ol>
+          <li>Rádio (saida LINE OUT) → entrada do Amplificador (LINE IN).</li>
+          <li>Amplificador (saída) → Falantes (altifalantes).</li>
+        </ol>
+        <p class="muted">Mantenha os cabos de alimentação separados dos cabos de sinal para evitar ruído.</p>
+      </article>
+
+      <article class="step">
+        <h3>3. Fusíveis, proteção e consumo (exemplo)</h3>
+        <p>Recomendações e valores típicos (exemplo prático):</p>
+        <ul>
+          <li>Se o seu amplificador for projetado para 12V e entrega cerca de <strong>20W RMS por canal</strong> em 4Ω, a corrente média por canal pode ficar em ~1,7A (I = P/V). Considerando eficiência e picos, reserve ~3–4A por canal.</li>
+          <li>Fuseamento sugerido: coloque um fusível rápido na linha +12V antes do amplificador, por exemplo <strong>5A–10A</strong> dependendo da potência e número de canais.</li>
+          <li>Para múltiplos canais ou amplificadores maiores, aumente a capacidade do fusível ou utilize fusíveis independentes por ramo.</li>
+        </ul>
+        <p class="muted">Estas são estimativas; consulte a folha de dados (datasheet) do seu amplificador para valores exatos.</p>
+      </article>
+    </div>
+
+    <h3>Esquema elétrico (texto ilustrativo)</h3>
+    <pre>
+Fonte ATX (+12V) -----+--------------------+-----------------
+                      |                    |
+                      |                    |
+                   [FUSÍVEL]             Rádio (LINE IN)
+                      |                    |
+                 Amplificador ------------+
+                      |                    |
+                   Falante L           Falante R
+                      |
+                    GND (massa comum)
+    </pre>
+
+    <h3>Recomendações de montagem e segurança</h3>
+    <ul>
+      <li>Sempre desligue e descarregue a fonte antes de mexer nas conexões.</li>
+      <li>Use fios com seção adequada (ex.: 16–14 AWG para correntes até ~10A). Cabos finos aquecem e aumentam queda de tensão.</li>
+      <li>Certifique-se de conexões firmes e isoladas; evite contatos expostos e curto-circuitos.</li>
+      <li>Se o amplificador produzir calor, providencie dissipação e ventilação.</li>
+      <li>Se possível, adicione um interruptor geral e um fusível acessível para manutenção rápida.</li>
+    </ul>
+  </section>
+
+  <!-- SESSÃO: Especificações técnicas resumidas -->
+  <section id="specs" class="container specs">
+    <h2>Especificações técnicas (exemplo)</h2>
+    <div class="specs-grid">
+      <div class="spec">
+        <h4>Fonte</h4>
+        <p>ATX (12V principal) — recomendado fusível 5–15A dependendo do load</p>
+      </div>
+      <div class="spec">
+        <h4>Amplificador</h4>
+        <p>Classe D (12–24V). Ex.: 20W RMS por canal @4Ω (valor depende do módulo)</p>
+      </div>
+      <div class="spec">
+        <h4>Falantes</h4>
+        <p>Impedância típica: 4Ω ou 8Ω — combine com a saída do amplificador</p>
+      </div>
+    </div>
+  </section>
+
   <section id="documents">
     <h2>Documentação</h2>
     <ul id="pdf-list" class="pdf-list">
@@ -57,6 +138,6 @@
     <div class="container">© MGV Group. Todos os direitos reservados.</div>
   </footer>
 
-  <script src="arquivos/js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
