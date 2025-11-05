@@ -1,3 +1,57 @@
+/* NAVBAR FLUTUANTE CENTRAL */
+.floating-navbar {
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: rgba(11,15,18,0.92);
+  border-radius: 32px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
+  padding: 10px 36px;
+  display: flex;
+  align-items: center;
+  min-width: 320px;
+  max-width: 90vw;
+}
+.floating-navbar ul {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.floating-navbar li {
+  margin: 0;
+}
+.floating-navbar a {
+  color: #eaf0f6;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.08em;
+  padding: 8px 18px;
+  border-radius: 18px;
+  transition: background .18s, color .18s;
+  letter-spacing: 0.01em;
+}
+.floating-navbar a:hover, .floating-navbar a:focus {
+  background: rgba(158,174,192,0.13);
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .floating-navbar {
+    padding: 6px 8px;
+    min-width: unset;
+    max-width: 98vw;
+  }
+  .floating-navbar ul {
+    gap: 8px;
+  }
+  .floating-navbar a {
+    font-size: 0.98em;
+    padding: 6px 8px;
+  }
+}
 /* Estilo principal - cores escuras, grid e gradientes inspirados na imagem anexada */
 :root{
   --bg:#0b0f12;
