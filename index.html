@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MGV Technology — Caixa de Som</title>
+  <link rel="stylesheet" href="arquivos/css/style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header class="hero">
+    <div class="container">
+      <h1 class="site-title">Bem vindo ao futuro.</h1>
+      <p class="lead">Desenvolvedor apaixonado por tecnologia, inovação e projetos práticos. Criei a Caixa de Som manualmente — um projeto de áudio artesanal da MGV Technology.</p>
+
+      <p class="connect">Conecte-se comigo:</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/miguel-zacharias" aria-label="GitHub">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/miguelzacharias/" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section id="gallery">
+      <h2>Galeria - MGS 2030-S</h2>
+      
+      <div class="gallery-grid">
+        <!-- Imagens com src direto para garantir exibição; usamos loading="lazy" para carregamento nativo -->
+        <figure>
+          <img class="lazy-image" src="arquivos/media/mgs.png" alt="Caixa foto 1">
+          <figcaption>Caixa - vista frontal</figcaption>
+        </figure>
+
+        <figure>
+          <img class="lazy-image" src="arquivos/media/mgs.png" alt="Caixa foto 2">
+          <figcaption>Caixa - detalhe</figcaption>
+        </figure>
+
+        <figure>
+          <img class="lazy-image" src="arquivos/media/mgs.png" alt="Caixa foto 3">
+          <figcaption>Caixa - montagem</figcaption>
+        </figure>
+      </div>
+  </section>
+
+  <section id="documents">
+    <h2>Documentação</h2>
+    <ul id="pdf-list" class="pdf-list">
+      <!-- A lista de arquivos será gerada automaticamente a partir de arquivos/assets/pdfs/pdfs.json -->
+    </ul>
+
+    <div class="drive-hint">
+      <strong>Nota:</strong> A lista acima exibe os manuais e arquivos utilizados para a montagem.
+    </div>
+  </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© MGV Group. Todos os direitos reservados.</div>
+  </footer>
+
+  <script src="arquivos/js/main.js" defer></script>
+</body>
+</html>
