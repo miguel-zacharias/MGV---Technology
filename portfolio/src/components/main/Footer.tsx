@@ -37,11 +37,7 @@ const Footer: FC = () => {
       icon: <FaLinkedin className="w-5 h-5" />, 
       label: 'LinkedIn',
     },
-    {
-      href: 'https://twitter.com/mgvtech',
-      icon: <FaTwitter className="w-5 h-5" />, 
-      label: 'Twitter',
-    },
+
   ]
 
   const quickLinks = [
