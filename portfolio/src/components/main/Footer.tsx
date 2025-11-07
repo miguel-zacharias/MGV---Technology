@@ -45,16 +45,16 @@ const Footer: FC = () => {
   ]
 
   const quickLinks = [
-    { name: 'Sobre', href: '#about' },
-    { name: 'Habilidades', href: '#skills' },
-    { name: 'Projetos', href: '#projects' },
+    { name: 'Sobre', href: '#resume' },
+    { name: 'Ferramentas', href: '#skills' },
+    { name: 'Trajetória', href: '#projects' },
     { name: 'Contato', href: '#contact' },
   ]
 
   const servicesLinks = [
-    { name: 'Desenvolvimento Web', href: '#skills' },
-    { name: 'Mobile', href: '#skills' },
-    { name: 'Projetos Maker', href: '#experience' },
+    { name: 'Desenvolvimento MGV', href: '#skills' },
+    { name: 'História', href: '#skills' },
+    { name: 'Início', href: '#' },
   ]
 
   const containerVariants = {
