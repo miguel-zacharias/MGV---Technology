@@ -105,7 +105,8 @@ export const TimelineElement: FC<{ item: TimelineItem; index: number }> = ({ ite
 )
 
 const Timeline: FC = () => {
-  const timelineContent = timelineData.map((item) => ({
+  // Render timeline chronologically: oldest -> newest
+  const timelineContent = timelineData.slice().reverse().map((item) => ({
     title: item.date,
     content: <TimelineElement key={item.id} item={item} index={item.id} />,
   }))
