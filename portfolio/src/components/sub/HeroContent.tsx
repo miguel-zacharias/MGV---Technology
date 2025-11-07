@@ -46,7 +46,7 @@ const HeroContent: FC = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <a
-            href="https://mgv-technology.vercel.app/"
+            href="https://technology-mgv.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-card/60 backdrop-blur-sm border border-primary/20 hover:border-primary/40 hover:bg-card/80 text-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
