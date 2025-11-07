@@ -58,74 +58,48 @@ const ResumeSection = () => {
             A MGV Technology nasceu em 2018 a partir de um sonho simples e ambicioso: construir um sistema de som Do-It-Yourself que qualquer entusiasta pudesse montar, entender e, sobretudo, sentir. O projeto começou na garagem com desenhos em papel, simulações básicas e horas de escuta crítica.
           </p>
 
-          {/* Conteúdo estendido ocultável: subseções renderizadas em linhas alternadas (md+) */}
+          {/* Conteúdo estendido ocultável */}
           {expanded && (
             <>
-              {/* helper para alternar lado */}
-              {(() => {
-                const SectionRow = ({ index, children }: any) => (
-                  <div className={`mb-8 md:flex md:items-start md:gap-8 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-                    <div className="md:w-1/2">
-                      <div className={`${index % 2 === 1 ? 'md:text-right' : 'md:text-left'}`}>{children}</div>
-                    </div>
-                    <div className="hidden md:block md:w-1/2" />
-                  </div>
-                )
+              <p>
+                Cada protótipo foi uma lição — nas medidas de sala, nas escolhas de falantes, na densidade do material de acabamento. Nos primeiros anos a abordagem foi experimental. Construímos protótipos com diferentes topologias de gabinete, testamos crossovers passivos e ativos, e passamos noites ajustando as curvas de resposta com DSP. A comunidade DIY foi essencial: feedbacks, testes em ambientes reais e trocas técnicas ajudaram a melhorar os projetos. De uma ideia de hobby, nasceu um processo metódico de desenvolvimento.
+              </p>
+              <p>
+                Em 2020 e 2021, refinamos o conceito e documentamos procedimentos de manufatura. Em 2022 iniciamos o projeto do receiver MSC 1000, com foco em usabilidade — VU meters visuais, monitoramento de potência e entradas flexíveis. Em 2024, demos o passo para produção small-batch, mantendo o caráter artesanal, mas com padrões de qualidade que garantissem resultados consistentes.
+              </p>
+              <p>
+                Hoje, a MGV combina o melhor do maker mindset com práticas de engenharia. Cada produto nasce de protótipos medidos, ajustes finos e uma paixão por som real. Seguimos abrindo caminhos entre a experimentação artesanal e soluções confiáveis para quem busca uma experiência sonora diferenciada.
+              </p>
 
-                return (
-                  <>
-                    <SectionRow index={0}>
-                      <p>
-                        Cada protótipo foi uma lição — nas medidas de sala, nas escolhas de falantes, na densidade do material de acabamento. Nos primeiros anos a abordagem foi experimental. Construímos protótipos com diferentes topologias de gabinete, testamos crossovers passivos e ativos, e passamos noites ajustando as curvas de resposta com DSP. A comunidade DIY foi essencial: feedbacks, testes em ambientes reais e trocas técnicas ajudaram a melhorar os projetos. De uma ideia de hobby, nasceu um processo metódico de desenvolvimento.
-                      </p>
-                      <p className="mt-4">
-                        Em 2020 e 2021, refinamos o conceito e documentamos procedimentos de manufatura. Em 2022 iniciamos o projeto do receiver MSC 1000, com foco em usabilidade — VU meters visuais, monitoramento de potência e entradas flexíveis. Em 2024, demos o passo para produção small-batch, mantendo o caráter artesanal, mas com padrões de qualidade que garantissem resultados consistentes.
-                      </p>
-                      <p className="mt-4">
-                        Hoje, a MGV combina o melhor do maker mindset com práticas de engenharia. Cada produto nasce de protótipos medidos, ajustes finos e uma paixão por som real. Seguimos abrindo caminhos entre a experimentação artesanal e soluções confiáveis para quem busca uma experiência sonora diferenciada.
-                      </p>
-                    </SectionRow>
+              <h3 className="text-2xl font-semibold mt-6 mb-2">Nossa Missão</h3>
+              <p>
+                Criar experiências sonoras memoráveis por meio de engenharia acústica, design e soluções eletrônicas cuidadosas. Buscamos a união entre forma e função para entregar produtos com caráter e desempenho.
+              </p>
 
-                    <SectionRow index={1}>
-                      <h3 className="text-2xl font-semibold mt-6 mb-2">Nossa Missão</h3>
-                      <p>
-                        Criar experiências sonoras memoráveis por meio de engenharia acústica, design e soluções eletrônicas cuidadosas. Buscamos a união entre forma e função para entregar produtos com caráter e desempenho.
-                      </p>
-                    </SectionRow>
+              <h3 className="text-2xl font-semibold mt-6 mb-2">Projetos Principais</h3>
+              <ul className="list-disc pl-6">
+                <li>
+                  <strong>MGS 2030 S</strong> — Caixa de som artesanal, projetada para oferecer potência e clareza sonora. Inclui estudos de gabinete, seleção de drivers e crossover personalizado.
+                </li>
+                <li className="mt-2">
+                  <strong>MSC 1000</strong> — Receiver em desenvolvimento com VU meters, monitoramento digital e integração para sistemas modernos.
+                </li>
+                <li className="mt-2">
+                  Protótipos e testes de DSP — Medições, ajustes de equalização e otimizações de resposta em laboratório.
+                </li>
+              </ul>
 
-                    <SectionRow index={2}>
-                      <h3 className="text-2xl font-semibold mt-6 mb-2">Projetos Principais</h3>
-                      <div className="space-y-3">
-                        <div>
-                          <strong>MGS 2030 S</strong> — Caixa de som artesanal, projetada para oferecer potência e clareza sonora. Inclui estudos de gabinete, seleção de drivers e crossover personalizado.
-                        </div>
-                        <div>
-                          <strong>MSC 1000</strong> — Receiver em desenvolvimento com VU meters, monitoramento digital e integração para sistemas modernos.
-                        </div>
-                        <div>
-                          Protótipos e testes de DSP — Medições, ajustes de equalização e otimizações de resposta em laboratório.
-                        </div>
-                      </div>
-                    </SectionRow>
+              <h3 className="text-2xl font-semibold mt-6 mb-2">Destaques</h3>
+              <ul className="list-disc pl-6">
+                <li>Design acústico e simulações</li>
+                <li>Prototipagem e produção small-batch</li>
+                <li>Integração eletrônica com foco em usabilidade e performance</li>
+              </ul>
 
-                    <SectionRow index={3}>
-                      <h3 className="text-2xl font-semibold mt-6 mb-2">Destaques</h3>
-                      <div className="space-y-2">
-                        <div>Design acústico e simulações</div>
-                        <div>Prototipagem e produção small-batch</div>
-                        <div>Integração eletrônica com foco em usabilidade e performance</div>
-                      </div>
-                    </SectionRow>
-
-                    <SectionRow index={4}>
-                      <h3 className="text-2xl font-semibold mt-6 mb-2">Contato</h3>
-                      <p>
-                        Para parcerias, encomendas ou dúvidas técnicas, entre em contato pelo e-mail <a href="mailto:contato@mgvtechnology.com" className="underline">contato@mgvtechnology.com</a> ou use a seção de contato no site.
-                      </p>
-                    </SectionRow>
-                  </>
-                )
-              })()}
+              <h3 className="text-2xl font-semibold mt-6 mb-2">Contato</h3>
+              <p>
+                Para parcerias, encomendas ou dúvidas técnicas, entre em contato pelo e-mail <a href="mailto:contato@mgvtechnology.com" className="underline">contato@mgvtechnology.com</a> ou use a seção de contato no site.
+              </p>
             </>
           )}
         </div>
